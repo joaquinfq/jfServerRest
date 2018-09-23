@@ -1,0 +1,23 @@
+{
+    "name": "jf-server-rest",
+    "description": "RESTful API server using JSON files",
+    "version": "0.0.1",
+    "author": "Joaquín Fernández <public@joaquinfernandez.net>",
+    "license": "MIT",
+    "main": "index.js",
+    "homepage": "https://github.com/joaquinfq/jfServerRest#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/joaquinfq/jfServerRest.git"
+    },
+    "bugs": {
+        "url": "https://github.com/joaquinfq/jfServerRest/issues"
+    },
+    "scripts": {
+        "start": "node scripts/start.js 8888 www",
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "jf-server": "^0.2.0"
+    }
+}
