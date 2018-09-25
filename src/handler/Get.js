@@ -13,26 +13,12 @@ module.exports = class jfServerRestHandlerGet extends jfServerRestHandlerBase
      */
     async process()
     {
-        let _data;
-        const _filename = this.getFilename();
+        const _pathname = this.url.pathname;
         const _response = this.response;
         const _storage  = this.storage;
-        if (this.isDirectory(_filename))
-        {
-            _data = this.adapter.apply(_storage.retrieveAll(this.url.pathname));
-        }
-        else if (this.isFile(_filename))
-        {
-            _data = _storage.retrieve(this.url.pathname);
-        }
-        else
-        {
-            const _extension = _storage.constructor.extension;
-            if (_extension)
-            {
-                _data = _storage.retrieve(this.url.pathname + _extension);
-            }
-        }
+        let _data       = this.isDirectory(this.getFilename())
+            ? _storage.retrieveAll(_pathname)
+            : _storage.retrieve(_pathname);
         if (_data)
         {
             _response.setProperties(

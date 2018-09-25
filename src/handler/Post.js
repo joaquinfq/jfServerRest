@@ -25,7 +25,7 @@ module.exports = class jfServerRestHandlerPost extends jfServerRestHandlerBase
             {
                 const _pKey   = this.request.headers['x-jfserver-id'] || '_id';
                 const _id     = _body[_pKey] || (_storage.getLastId(_directory) + 1);
-                let _filename = path.join(_directory, String(_id)) + _storage.constructor.extension;
+                let _filename = path.join(_directory, String(_id));
                 if (!(_pKey in _body))
                 {
                     _body[_pKey] = _id;
