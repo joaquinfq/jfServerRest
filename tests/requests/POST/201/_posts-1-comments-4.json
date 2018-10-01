@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el comentario 4 del artículo 1",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/1/comments",
+        "body": {
+            "comment": "Suspendisse sem justo, iaculis eu vestibulum quis, tristique ac leo",
+            "postId": 1
+        },
+        "headers": {
+            "Location": "/api/posts/1/comments/4"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-1-comments-4.json"
+        }
+    }
+}

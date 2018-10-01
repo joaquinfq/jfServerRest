@@ -1,0 +1,15 @@
+{
+    "description": "404 PATCH recurso inexistente: /api/posts/4/comments/5",
+    "options": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/posts/4/comments/5",
+        "body": {
+            "comment": "Donec in venenatis lacus, sed vestibulum justo",
+            "postId": 4
+        }
+    },
+    "expected": {
+        "statusCode": 404,
+        "body": "../../../data/_error-404.json"
+    }
+}

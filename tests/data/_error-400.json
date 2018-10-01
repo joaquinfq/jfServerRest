@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "code": "",
+            "message": "Bad Request",
+            "statusCode": 400
+        }
+    ]
+}

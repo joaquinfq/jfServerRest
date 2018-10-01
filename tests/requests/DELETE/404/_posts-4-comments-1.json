@@ -1,0 +1,11 @@
+{
+    "description": "404 DELETE recurso inexistente: /api/posts/4/comments/1",
+    "options": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/posts/4/comments/1"
+    },
+    "expected": {
+        "statusCode": 404,
+        "body": "../../../data/_error-404.json"
+    }
+}

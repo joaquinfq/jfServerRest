@@ -1,0 +1,11 @@
+{
+    "description": "400 PATCH sin contenido: /api/posts/3/comments/4",
+    "options": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/posts/3/comments/4"
+    },
+    "expected": {
+        "statusCode": 400,
+        "body": "../../../data/_error-400.json"
+    }
+}

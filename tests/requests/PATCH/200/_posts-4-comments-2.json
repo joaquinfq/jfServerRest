@@ -1,0 +1,20 @@
+{
+    "description": "200 PATCH Actualizar el comentario 2 del artículo 4",
+    "options": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/posts/4/comments/2",
+        "body": {
+            "comment": 1538386540203
+        }
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": {
+                "_id": 2,
+                "comment": 1538386540203,
+                "postId": 4
+            }
+        }
+    }
+}

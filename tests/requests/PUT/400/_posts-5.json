@@ -1,0 +1,11 @@
+{
+    "description": "400 PUT sin contenido: /api/posts/5",
+    "options": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/posts/5"
+    },
+    "expected": {
+        "statusCode": 400,
+        "body": "../../../data/_error-400.json"
+    }
+}

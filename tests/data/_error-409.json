@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "code": "",
+            "message": "Conflict",
+            "statusCode": 409
+        }
+    ]
+}

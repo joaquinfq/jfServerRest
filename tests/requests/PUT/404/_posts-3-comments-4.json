@@ -1,0 +1,15 @@
+{
+    "description": "404 PUT recurso inexistente: /api/posts/3/comments/4",
+    "options": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/posts/3/comments/4",
+        "body": {
+            "comment": "Vestibulum ut dignissim lorem",
+            "postId": 3
+        }
+    },
+    "expected": {
+        "statusCode": 404,
+        "body": "../../../data/_error-404.json"
+    }
+}

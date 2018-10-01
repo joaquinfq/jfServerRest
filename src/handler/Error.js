@@ -7,13 +7,10 @@ const jfServerRestHandlerBase = require('./Base');
  * @class     jf.server.rest.handler.Error
  * @extends   jf.server.rest.handler.Base
  */
-module.exports = class jfServerRestHandlerError extends jfServerRestHandlerBase
+class jfServerRestHandlerError extends jfServerRestHandlerBase
 {
-    /**
-     * @override
-     */
-    _init(config)
-    {
-        this.response = new jfServerResponseJson(config);
-    }
-};
+}
+
+//------------------------------------------------------------------------------
+jfServerRestHandlerError.register();
+module.exports = jfServerRestHandlerError;

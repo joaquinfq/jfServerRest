@@ -1,0 +1,11 @@
+{
+    "description": "404 GET Recurso inexistente: /api/posts/2/comments/4",
+    "options": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/posts/2/comments/4"
+    },
+    "expected": {
+        "statusCode": 404,
+        "body": "../../../data/_error-404.json"
+    }
+}

@@ -6,7 +6,7 @@ const jfServerRestHandlerBase = require('./Base');
  * @class     jf.server.rest.handler.Get
  * @extends   jf.server.rest.handler.Base
  */
-module.exports = class jfServerRestHandlerGet extends jfServerRestHandlerBase
+class jfServerRestHandlerGet extends jfServerRestHandlerBase
 {
     /**
      * @override
@@ -42,7 +42,11 @@ module.exports = class jfServerRestHandlerGet extends jfServerRestHandlerBase
                 }
             );
         }
-        //
+
         return super.process();
     }
-};
+}
+
+//------------------------------------------------------------------------------
+jfServerRestHandlerGet.register();
+module.exports = jfServerRestHandlerGet;

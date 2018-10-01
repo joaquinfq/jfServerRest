@@ -1,0 +1,20 @@
+{
+    "description": "200 PATCH Actualizar el artículo 1",
+    "options": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/posts/1",
+        "body": {
+            "body": 1538386536043
+        }
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": {
+                "_id": 1,
+                "body": 1538386536043,
+                "title": "Quisque eget sagittis eros, a venenatis orci"
+            }
+        }
+    }
+}

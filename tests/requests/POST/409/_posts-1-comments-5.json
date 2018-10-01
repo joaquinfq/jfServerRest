@@ -1,0 +1,15 @@
+{
+    "description": "409 POST sobre recurso existente: /api/posts/1/comments/5",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/1/comments/5",
+        "body": {
+            "comment": "Donec sit amet dui nisi",
+            "postId": 1
+        }
+    },
+    "expected": {
+        "statusCode": 409,
+        "body": "../../../data/_error-409.json"
+    }
+}

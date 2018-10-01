@@ -1,0 +1,11 @@
+{
+    "description": "400 POST sin contenido: /api/posts/1/comments/2",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/1/comments/2"
+    },
+    "expected": {
+        "statusCode": 400,
+        "body": "../../../data/_error-400.json"
+    }
+}

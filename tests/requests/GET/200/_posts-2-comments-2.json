@@ -1,0 +1,13 @@
+{
+    "description": "200 GET Recuperar el comentario 2 del artículo 2",
+    "options": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/posts/2/comments/2"
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": "../../../data/_posts-2-comments-2.json"
+        }
+    }
+}

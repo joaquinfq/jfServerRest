@@ -1,4 +1,5 @@
 const jfServerRestHandlerBase = require('./Base');
+
 /**
  * Punto de entrada de las peticiones PATCH.
  *
@@ -6,7 +7,7 @@ const jfServerRestHandlerBase = require('./Base');
  * @class     jf.server.rest.handler.Patch
  * @extends   jf.server.rest.handler.Base
  */
-module.exports = class jfServerRestHandlerPatch extends jfServerRestHandlerBase
+class jfServerRestHandlerPatch extends jfServerRestHandlerBase
 {
     /**
      * @override
@@ -14,36 +15,28 @@ module.exports = class jfServerRestHandlerPatch extends jfServerRestHandlerBase
     async process()
     {
         let _error;
-        const _body = this.body;
-        if (this.isDirectory(this.getFilename()))
+        const _body     = this.body;
+        const _storage  = this.storage;
+        const _pathname = this.url.pathname;
+        const _data     = _storage.retrieve(_pathname);
+        if (_data === false)
         {
-            _error = 405;
+            _error = this.isDirectory(this.getFilename())
+                ? 405
+                : 404;
         }
         else if (_body && typeof _body === 'object')
         {
-            const _pathname = this.url.pathname;
-            const _storage  = this.storage;
-            let _data       = _storage.retrieve(_pathname);
             if (_data)
             {
-                Object.assign(_data, _body);
-                if (_storage.update(_pathname, _data))
-                {
-                    this.response.setProperties(
-                        {
-                            data       : Object.assign(_data, _body),
-                            statusCode : 200
-                        }
-                    );
-                }
-                else
+                if (!this._update(_pathname, _data))
                 {
                     _error = 500;
                 }
             }
             else
             {
-                _error = 404;
+                _error = 500;
             }
         }
         else
@@ -58,7 +51,38 @@ module.exports = class jfServerRestHandlerPatch extends jfServerRestHandlerBase
                 }
             );
         }
-        //
+
         return super.process();
     }
-};
+
+    /**
+     * Actualiza el contenido del registro.
+     *
+     * @param {string} pathname Ruta del recurso.
+     * @param {object} data     Datos actuales.
+     *
+     * @return {boolean} Resultado de la operación.
+     *
+     * @protected
+     */
+    _update(pathname, data)
+    {
+        Object.assign(data, this.body);
+        const _result = this.storage.update(pathname, data);
+        if (_result)
+        {
+            this.response.setProperties(
+                {
+                    data,
+                    statusCode : 200
+                }
+            );
+        }
+
+        return _result;
+    }
+}
+
+//------------------------------------------------------------------------------
+jfServerRestHandlerPatch.register();
+module.exports = jfServerRestHandlerPatch;

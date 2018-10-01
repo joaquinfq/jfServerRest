@@ -1,0 +1,10 @@
+{
+    "description": "204 DELETE Eliminar el artículo 5",
+    "options": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/posts/5"
+    },
+    "expected": {
+        "statusCode": 204
+    }
+}

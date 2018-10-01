@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el comentario 4 del artículo 2",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/2/comments",
+        "body": {
+            "comment": "Phasellus commodo vel ipsum non condimentum",
+            "postId": 2
+        },
+        "headers": {
+            "Location": "/api/posts/2/comments/4"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-2-comments-4.json"
+        }
+    }
+}

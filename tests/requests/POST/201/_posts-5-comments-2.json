@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el comentario 2 del artículo 5",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/5/comments",
+        "body": {
+            "comment": "In pulvinar efficitur erat, in ornare arcu posuere vitae",
+            "postId": 5
+        },
+        "headers": {
+            "Location": "/api/posts/5/comments/2"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-5-comments-2.json"
+        }
+    }
+}

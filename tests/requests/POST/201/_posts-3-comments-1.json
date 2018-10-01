@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el comentario 1 del artículo 3",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/3/comments",
+        "body": {
+            "comment": "Morbi in luctus ipsum, ac sollicitudin augue",
+            "postId": 3
+        },
+        "headers": {
+            "Location": "/api/posts/3/comments/1"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-3-comments-1.json"
+        }
+    }
+}

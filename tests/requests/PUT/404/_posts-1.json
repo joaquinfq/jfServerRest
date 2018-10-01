@@ -1,0 +1,15 @@
+{
+    "description": "404 PUT recurso inexistente: /api/posts/1",
+    "options": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/posts/1",
+        "body": {
+            "body": "Maecenas non libero et orci fringilla luctus at ac erat. Integer aliquet risus est, ac hendrerit neque pellentesque eget. Sed erat lorem, sodales id egestas vehicula, porttitor eu nisi. Curabitur eu congue mi. Morbi a est suscipit, ullamcorper ante et, sollicitudin tellus. Proin nec lectus justo. Proin consectetur tortor at tempor placerat. Curabitur aliquam sem non urna semper rhoncus. Morbi enim massa, commodo at scelerisque a, tincidunt eu leo. Phasellus commodo vel ipsum non condimentum. Aenean consectetur diam magna, vel ultricies risus cursus nec. Quisque ultrices sapien nisi, at scelerisque sem consectetur ut.\nEtiam nec mi ac nibh condimentum pretium. Nulla nec nisl ac urna semper mattis vel vitae lorem. Nam ac dolor erat. Vivamus arcu tortor, porttitor at leo sit amet, venenatis feugiat odio. Duis mi nisl, egestas nec quam non, iaculis hendrerit nisi. In ac leo eget nulla tincidunt tempus et sed nulla. Donec mauris enim, consequat eget pulvinar eget, condimentum nec eros. Vivamus egestas condimentum mauris elementum aliquet. Donec varius justo lectus, eu ullamcorper est scelerisque eget. Donec ut vulputate nisi. Aliquam volutpat dui vel mi mollis, in feugiat erat blandit. Maecenas vitae lacinia ex, aliquet dignissim augue. Fusce tristique magna sed nunc vestibulum, eu ultrices lectus consectetur. Cras vel felis justo. Vestibulum a mauris vitae orci consectetur posuere interdum eget elit. Morbi sed ipsum a lectus ultrices tempus eu sit amet libero.\nNulla non sem vel orci efficitur aliquet. Sed efficitur, enim quis ultrices elementum, diam orci efficitur risus, vel placerat tortor ante et orci. Fusce at dapibus sem. Quisque eget sagittis eros, a venenatis orci. Mauris viverra ultrices mi sit amet pharetra. Donec gravida risus quis mi tempus, ac finibus arcu semper. Duis posuere quam leo, sit amet euismod sapien finibus vel.",
+            "title": "Quisque eget sagittis eros, a venenatis orci"
+        }
+    },
+    "expected": {
+        "statusCode": 404,
+        "body": "../../../data/_error-404.json"
+    }
+}

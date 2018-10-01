@@ -1,0 +1,20 @@
+{
+    "description": "200 PATCH Actualizar el artículo 4",
+    "options": {
+        "method": "PATCH",
+        "url": "http://localhost:8888/api/posts/4",
+        "body": {
+            "body": 1538386541271
+        }
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": {
+                "_id": 4,
+                "body": 1538386541271,
+                "title": "Maecenas non libero et orci fringilla luctus at ac erat"
+            }
+        }
+    }
+}

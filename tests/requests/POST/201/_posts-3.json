@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el artículo 3",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts",
+        "body": {
+            "body": "Nullam nisl quam, posuere nec suscipit eget, suscipit id massa. Suspendisse vel dui nulla. Nullam convallis ex felis, nec semper turpis interdum in. Donec aliquet eleifend augue a laoreet. Pellentesque cursus sodales orci vel tristique. Suspendisse potenti. Sed eu euismod elit, gravida pellentesque nibh. Sed sed sem efficitur, pellentesque diam ac, rhoncus ante. Donec sed odio sit amet velit scelerisque pulvinar. In sit amet efficitur turpis, at mollis magna. Suspendisse rutrum tellus eu laoreet finibus. Sed leo nibh, vestibulum in massa in, tristique pretium nunc. Integer tristique massa tellus, quis vehicula dui tristique a.\nEtiam nec mi ac nibh condimentum pretium. Nulla nec nisl ac urna semper mattis vel vitae lorem. Nam ac dolor erat. Vivamus arcu tortor, porttitor at leo sit amet, venenatis feugiat odio. Duis mi nisl, egestas nec quam non, iaculis hendrerit nisi. In ac leo eget nulla tincidunt tempus et sed nulla. Donec mauris enim, consequat eget pulvinar eget, condimentum nec eros. Vivamus egestas condimentum mauris elementum aliquet. Donec varius justo lectus, eu ullamcorper est scelerisque eget. Donec ut vulputate nisi. Aliquam volutpat dui vel mi mollis, in feugiat erat blandit. Maecenas vitae lacinia ex, aliquet dignissim augue. Fusce tristique magna sed nunc vestibulum, eu ultrices lectus consectetur. Cras vel felis justo. Vestibulum a mauris vitae orci consectetur posuere interdum eget elit. Morbi sed ipsum a lectus ultrices tempus eu sit amet libero.\nFusce faucibus diam ut blandit dictum. Integer elementum, tortor non varius consequat, lacus felis efficitur nisi, vitae facilisis ligula nisi commodo metus. Donec urna nisl, mattis ac pulvinar ac, ultrices a erat. In ac velit a arcu pharetra blandit at eget quam. Nulla facilisi. Suspendisse at vulputate nisi, at faucibus orci. Integer pretium posuere felis, eget semper neque consectetur sit amet. Praesent tempus vehicula gravida. Suspendisse tempus id justo eu commodo. Suspendisse potenti. Mauris vestibulum, ligula nec ullamcorper consectetur, quam lorem sollicitudin ligula, non feugiat enim risus sed ante. Nulla vel nisi feugiat, ullamcorper nulla non, convallis ligula. Suspendisse id pharetra quam, vel cursus lacus.",
+            "title": "Duis ut velit lobortis sem pulvinar aliquet sit amet in lacus"
+        },
+        "headers": {
+            "Location": "/api/posts/3"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-3.json"
+        }
+    }
+}

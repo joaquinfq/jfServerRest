@@ -1,0 +1,20 @@
+{
+    "description": "200 PUT Actualizar el comentario 2 del artículo 4",
+    "options": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/posts/4/comments/2",
+        "body": {
+            "comment": 1538386543948
+        }
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": {
+                "_id": 2,
+                "comment": 1538386543948,
+                "postId": null
+            }
+        }
+    }
+}

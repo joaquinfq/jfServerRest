@@ -1,0 +1,20 @@
+{
+    "description": "200 PUT Actualizar el artículo 5",
+    "options": {
+        "method": "PUT",
+        "url": "http://localhost:8888/api/posts/5",
+        "body": {
+            "body": 1538386538793
+        }
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": {
+                "_id": 5,
+                "body": 1538386538793,
+                "title": null
+            }
+        }
+    }
+}

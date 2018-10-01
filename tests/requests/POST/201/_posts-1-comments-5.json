@@ -1,0 +1,20 @@
+{
+    "description": "201 POST Crear el comentario 5 del artículo 1",
+    "options": {
+        "method": "POST",
+        "url": "http://localhost:8888/api/posts/1/comments",
+        "body": {
+            "comment": "Donec sit amet dui nisi",
+            "postId": 1
+        },
+        "headers": {
+            "Location": "/api/posts/1/comments/5"
+        }
+    },
+    "expected": {
+        "statusCode": 201,
+        "body": {
+            "data": "../../../data/_posts-1-comments-5.json"
+        }
+    }
+}

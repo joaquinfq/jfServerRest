@@ -1,0 +1,10 @@
+{
+    "description": "204 DELETE Eliminar el comentario 1 del artículo 4",
+    "options": {
+        "method": "DELETE",
+        "url": "http://localhost:8888/api/posts/4/comments/1"
+    },
+    "expected": {
+        "statusCode": 204
+    }
+}

@@ -1,4 +1,6 @@
 const jfServerRestHandlerBase = require('./Base');
+const path                    = require('path');
+
 /**
  * Punto de entrada de las peticiones DELETE.
  *
@@ -6,7 +8,7 @@ const jfServerRestHandlerBase = require('./Base');
  * @class     jf.server.rest.handler.Delete
  * @extends   jf.server.rest.handler.Base
  */
-module.exports = class jfServerRestHandlerDelete extends jfServerRestHandlerBase
+class jfServerRestHandlerDelete extends jfServerRestHandlerBase
 {
     /**
      * @override
@@ -14,21 +16,42 @@ module.exports = class jfServerRestHandlerDelete extends jfServerRestHandlerBase
     async process()
     {
         let _error;
-        switch(this.storage.delete(this.url.pathname))
+        if (this.body)
         {
-            case 0:
-                _error = 404;
-                break;
-            case false:
-                _error = 500;
-                break;
-            default:
-                this.response.setProperties(
+            // DELETE no acepta body
+            _error = 400;
+        }
+        else
+        {
+            const _pathname = this.url.pathname;
+            const _storage  = this.storage;
+            const _filename = _storage.buildFilename(_pathname);
+            if (this.isFile(_filename))
+            {
+                if (_storage.delete(_pathname))
+                {
+                    this.response.setProperties(
+                        {
+                            statusCode : 204
+                        }
+                    );
+                    const _directory = _filename.replace(new RegExp(path.extname(_filename) + '$'), '');
+                    console.log(_directory);
+                    if (this.isDirectory(_directory))
                     {
-                        statusCode : 204
+                        console.log(JSON.stringify(this.rmdir(_directory)));
                     }
-                );
-                break;
+                }
+                else
+                {
+                    // Ocurrió un error durante la eliminación.
+                    _error = 500;
+                }
+            }
+            else
+            {
+                _error = 404;
+            }
         }
         if (_error)
         {
@@ -38,7 +61,10 @@ module.exports = class jfServerRestHandlerDelete extends jfServerRestHandlerBase
                 }
             );
         }
-        //
         return super.process();
     }
-};
+}
+
+//------------------------------------------------------------------------------
+jfServerRestHandlerDelete.register();
+module.exports = jfServerRestHandlerDelete;

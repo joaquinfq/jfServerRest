@@ -1,0 +1,19 @@
+{
+    "description": "200 GET Recuperar todos los comentarios del artículo 5",
+    "options": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/posts/5/comments"
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": [
+                "../../../data/_posts-5-comments-1.json",
+                "../../../data/_posts-5-comments-2.json",
+                "../../../data/_posts-5-comments-3.json",
+                "../../../data/_posts-5-comments-4.json",
+                "../../../data/_posts-5-comments-5.json"
+            ]
+        }
+    }
+}

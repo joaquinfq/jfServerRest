@@ -1,0 +1,19 @@
+{
+    "description": "200 GET Recuperar todos los artículos",
+    "options": {
+        "method": "GET",
+        "url": "http://localhost:8888/api/posts"
+    },
+    "expected": {
+        "statusCode": 200,
+        "body": {
+            "data": [
+                "../../../data/_posts-1.json",
+                "../../../data/_posts-2.json",
+                "../../../data/_posts-3.json",
+                "../../../data/_posts-4.json",
+                "../../../data/_posts-5.json"
+            ]
+        }
+    }
+}
