@@ -61,6 +61,7 @@ class jfServerRestHandlerDelete extends jfServerRestHandlerBase
                 }
             );
         }
+
         return super.process();
     }
 }
