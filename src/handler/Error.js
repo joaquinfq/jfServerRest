@@ -1,4 +1,3 @@
-const jfServerResponseJson    = require('jf-server/src/response/Json');
 const jfServerRestHandlerBase = require('./Base');
 /**
  * Maneja los errores antes de que algún handler pueda procesar la petición.
@@ -10,7 +9,6 @@ const jfServerRestHandlerBase = require('./Base');
 class jfServerRestHandlerError extends jfServerRestHandlerBase
 {
 }
-
 //------------------------------------------------------------------------------
 jfServerRestHandlerError.register();
 module.exports = jfServerRestHandlerError;
